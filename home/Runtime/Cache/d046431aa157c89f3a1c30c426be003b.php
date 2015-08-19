@@ -30,7 +30,7 @@
               					<?php echo ($value["ID"]); ?></td>
               					<td>
               						<?php echo ($value["CD"]); ?></td>
-              						<td><a href="#">刪除</a>|<a href="#">修改</a></td>
+              						<td><a href="__APP__/?m=index&a=delete&id=<?php echo ($value["ID"]); ?>">刪除</a>|<a href="#">修改</a></td>
               					</tr><?php endforeach; endif; ?>
               				<?php else: ?>              
               				<tr>
