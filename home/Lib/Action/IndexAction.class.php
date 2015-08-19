@@ -15,7 +15,7 @@
     $this->display();
     }*/
     public function index(){
-    $m = M('test');
+    $m = M('qhddata');
     $re = $m->order('ID desc')->select();
     //判断查询是否成功
     if ($re === NULL) {
@@ -27,7 +27,7 @@
     //dump($re);
     }
     public function delete(){
-    $m = M('test');
+    $m = M('qhddata');
     $num = $m->where("ID='".$_GET['id']."'")->delete();
     //$unm = $m->where('id=193019')->delete();
     //$num = $m->where('ID='.$_GET['id']."'")->delete;
