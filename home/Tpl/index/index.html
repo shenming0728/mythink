@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+		<!--<foreach name='qhddata'  item='v'>
+			{<$v.CD>}<br>
+		</foreach>-->
+              <!-- {<$Think.now>}<br>
+                {<$Think.version>}<br>
+                <if condition = 'strlen($str) gt 10'>
+                    {<$str|md_sudstr = 0,2,'utf-8'>}...
+                    <else />
+                    {<$str>}
+                </if>
+                {<$now|date='YMDH:i:s',###>}<br>
+                {<$data|default = 'no data'>}<br>
+                {<$a/$b>}<br>-->
+              
+              <table width='80%' align="center" border="1" cellpadding="5" cellspacing="0">
+              <tr>
+              	<td colspan="3"><a href="#">浏览</a>|<a href="#">添加</a></td>
+              </tr>
+              	<tr>
+              		<th>id</th>
+              		<th>产地</th>
+              		<th>操作</th>
+              	</tr>
+
+              	<if condition ='$re neq NULL'>
+              		<foreach name='re' item='value'>
+              			<tr>
+              				<td>
+              					{<$value.ID>}</td>
+              					<td>
+              						{<$value.CD>}</td>
+              						<td><a href="#">刪除</a>|<a href="#">修改</a></td>
+              					</tr>
+              				</foreach>
+              				<else />              
+              				<tr>
+              					<td colspan="3">
+              						{<$re|default='数据库没有数据'>}</td>
+              					</tr>
+              				</if>
+              			</table>
+              
+
+</html>
